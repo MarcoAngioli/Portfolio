@@ -1,0 +1,367 @@
+:root {
+  --bg: #0b1020;
+  --bg-alt: #13182a;
+  --accent: #4fd1c5;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #1f2937;
+  --radius-lg: 1.5rem;
+  --radius-md: 1rem;
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.35);
+  --shadow-subtle: 0 8px 20px rgba(0, 0, 0, 0.3);
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top left, #1f2937, #020617 60%);
+  color: var(--text);
+  font-family: var(--font-main);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Layout */
+.page {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.sidebar {
+  flex: 0 0 260px;
+  background: linear-gradient(160deg, #020617, #111827);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem 1.5rem;
+  box-shadow: var(--shadow-soft);
+  position: sticky;
+  top: 1.5rem;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.main {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 2rem 2rem 3rem;
+}
+
+/* Profile */
+.profile {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: var(--shadow-subtle);
+  margin-bottom: 1rem;
+}
+
+.profile-name {
+  font-size: 1.4rem;
+  margin: 0.3rem 0;
+}
+
+.profile-role {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Buttons & links */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: var(--text);
+  font-size: 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 0.75rem;
+  transition: all 0.15s ease-out;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(79, 209, 197, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Contacts */
+.contacts {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.contacts li + li {
+  margin-top: 0.3rem;
+}
+
+.contacts a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: auto; /* push nav to bottom */
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sidebar-nav a {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.4rem 0.2rem;
+  border-radius: 0.4rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sidebar-nav a:hover {
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--text);
+}
+
+/* Sections */
+.section {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+  margin-bottom: 2rem;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.section h3 {
+  font-size: 1.15rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.card {
+  background: var(--bg-alt);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(15, 23, 42, 0.95);
+  box-shadow: var(--shadow-subtle);
+  font-size: 0.9rem;
+}
+
+.card h4 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+/* Lists */
+.list {
+  padding-left: 1.2rem;
+  font-size: 0.92rem;
+}
+
+.list li + li {
+  margin-top: 0.8rem;
+}
+
+/* Timeline */
+.timeline {
+  border-left: 2px solid rgba(148, 163, 184, 0.6);
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.3rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.19rem;
+  top: 0.35rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(79, 209, 197, 0.25);
+}
+
+.timeline-item h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.timeline-period {
+  margin: 0.15rem 0 0.4rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Projects */
+.project-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+.project-list li + li {
+  margin-top: 0.5rem;
+}
+
+.project-list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
+
+/* Filters */
+.filters {
+  display: inline-flex;
+  gap: 0.5rem;
+  padding: 0.35rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(31, 41, 55, 0.85);
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #0f172a;
+}
+
+/* Contact form */
+.contact-form {
+  max-width: 420px;
+  margin-top: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.form-row label {
+  margin-bottom: 0.25rem;
+}
+
+.form-row input,
+.form-row textarea {
+  border-radius: 0.6rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: #020617;
+  color: var(--text);
+  padding: 0.5rem 0.7rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(79, 209, 197, 0.3);
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+/* Links inside text */
+a {
+  color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    max-width: none;
+  }
+
+  .main {
+    padding: 1.5rem 1.3rem 2.3rem;
+  }
+}
