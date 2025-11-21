@@ -5,7 +5,12 @@
   <title>Marco Angioli – Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
   <!-- Scroll progress bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
@@ -22,17 +27,30 @@
           Show contacts
         </button>
 
-        <ul id="contacts" class="contacts hidden">
-          <li><span>Rome, Italy</span></li>
-          <li><a href="mailto:angioli.marco@gmail.com">angioli.marco@gmail.com</a></li>
-          <li><span>+39 328 359 8617</span></li>
-          <li>
-            <a href="https://phd.uniroma1.it/web/MARCO-ANGIOLI_nP1773057_IT.aspx" target="_blank">
-              PhD profile @ Sapienza
-            </a>
-          </li>
-        </ul>
-      </div>
+       <ul id="contacts" class="contacts hidden">
+  <li><span>Rome, Italy</span></li>
+  <li><a href="mailto:angioli.marco@gmail.com">angioli.marco@gmail.com</a></li>
+  <li><span>+39 328 359 8617</span></li>
+  <li>
+    <a href="https://phd.uniroma1.it/web/MARCO-ANGIOLI_nP1773057_IT.aspx" target="_blank">
+      PhD profile @ Sapienza
+    </a>
+  </li>
+</ul>
+
+<div class="sidebar-social">
+  <!-- TODO: put your real links here -->
+  <a href="https://github.com/" target="_blank" aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+  <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+  <a href="mailto:angioli.marco@gmail.com" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+</div>
+
 
       <nav class="sidebar-nav">
         <a href="#about">About</a>
@@ -140,41 +158,60 @@
           </a>
         </p>
 
-        <h3>Education</h3>
-        <div class="timeline">
-          <article class="timeline-item">
-            <h4>PhD in Technologies of Information and Communication (ICT)</h4>
-            <p class="timeline-period">
-              Sapienza University of Rome – Electronic Engineering curriculum (Nov 2022 – present)
-            </p>
-            <p>
-              Research areas: Digital Hardware Design for AI, Hyperdimensional Computing,
-              Embedded AI, hardware accelerators for learning systems.
-            </p>
-          </article>
+        <h3><i class="fa-solid fa-graduation-cap section-icon"></i> Education</h3>
+<ul class="edu-list">
+  <li class="edu-item">
+    <div class="edu-header">
+      <div>
+        <div class="edu-degree">PhD in Technologies of Information and Communication (ICT)</div>
+        <div class="edu-inst">Sapienza University of Rome – Electronic Engineering curriculum</div>
+      </div>
+      <div class="edu-meta">
+        <span class="edu-date">Nov 2022 – present</span>
+        <span class="edu-location"><i class="fa-solid fa-location-dot"></i> Rome, Italy</span>
+      </div>
+    </div>
+    <p class="edu-note">
+      Research areas: digital hardware design for AI, hyperdimensional computing,
+      embedded AI, hardware accelerators for learning systems.
+    </p>
+  </li>
 
-          <article class="timeline-item">
-            <h4>MSc in Electronic Engineering</h4>
-            <p class="timeline-period">
-              Sapienza University of Rome (Sep 2019 – Jul 2022) – Final grade: 110/110L
-            </p>
-            <p>
-              Thesis: <em>“Analisi ed implementazione di algoritmi Contextual Bandits
-              su processori RISC-V dotati di accelerazione vettoriale riconfigurabile”</em>.
-            </p>
-          </article>
+  <li class="edu-item">
+    <div class="edu-header">
+      <div>
+        <div class="edu-degree">MSc in Electronic Engineering</div>
+        <div class="edu-inst">Sapienza University of Rome</div>
+      </div>
+      <div class="edu-meta">
+        <span class="edu-date">Sep 2019 – Jul 2022</span>
+        <span class="edu-location"><i class="fa-solid fa-clipboard-check"></i> 110/110L</span>
+      </div>
+    </div>
+    <p class="edu-note">
+      Thesis: <em>“Analisi ed implementazione di algoritmi Contextual Bandits
+      su processori RISC-V dotati di accelerazione vettoriale riconfigurabile”</em>.
+    </p>
+  </li>
 
-          <article class="timeline-item">
-            <h4>BSc in Electronic Engineering</h4>
-            <p class="timeline-period">
-              Sapienza University of Rome (Sep 2016 – Dec 2019) – Final grade: 100/110
-            </p>
-            <p>
-              Thesis: <em>“Stato dell'arte nella computazione neuromorfica
-              (neuromorphic computing)”</em>.
-            </p>
-          </article>
-        </div>
+  <li class="edu-item">
+    <div class="edu-header">
+      <div>
+        <div class="edu-degree">BSc in Electronic Engineering</div>
+        <div class="edu-inst">Sapienza University of Rome</div>
+      </div>
+      <div class="edu-meta">
+        <span class="edu-date">Sep 2016 – Dec 2019</span>
+        <span class="edu-location"><i class="fa-solid fa-clipboard-check"></i> 100/110</span>
+      </div>
+    </div>
+    <p class="edu-note">
+      Thesis: <em>“Stato dell'arte nella computazione neuromorfica
+      (neuromorphic computing)”</em>.
+    </p>
+  </li>
+</ul>
+
 
         <h3>Experience</h3>
         <div class="timeline">
