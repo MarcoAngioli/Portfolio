@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Name – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="your-photo.jpg" alt="Your portrait" class="profile-photo" />
+        <h1 class="profile-name">Your Name</h1>
+        <p class="profile-role">PhD Candidate in XYZ</p>
+
+        <button id="toggle-contacts" class="btn">
+          Show contacts
+        </button>
+
+        <ul id="contacts" class="contacts hidden">
+          <li><a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/your-username" target="_blank">GitHub</a></li>
+          <li><a href="mailto:you@example.com">you@example.com</a></li>
+          <li><span>+39 000 000 0000</span></li>
+        </ul>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#science">Science</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <h2>About me</h2>
+        <p>
+          Hello, I’m <strong>Your Name</strong>, a PhD candidate in
+          <em>Something Technical</em>. Replace this text with a brief
+          description of your research interests and what you’re working on.
+        </p>
+
+        <h3>Currently</h3>
+        <div class="cards">
+          <article class="card">
+            <h4>Current Position / Project</h4>
+            <p>
+              Short description of your current research / position.
+            </p>
+          </article>
+          <article class="card">
+            <h4>PhD @ Your Institution</h4>
+            <p>
+              One or two sentences about your thesis and group.
+            </p>
+          </article>
+        </div>
+
+        <h3>Fascinated by</h3>
+        <div class="cards">
+          <article class="card">
+            <h4>Hardware for AI</h4>
+            <p>Brief text about your interest.</p>
+          </article>
+          <article class="card">
+            <h4>Hyperdimensional Computing</h4>
+            <p>Brief text about your interest.</p>
+          </article>
+          <article class="card">
+            <h4>Embedded Systems</h4>
+            <p>Brief text about your interest.</p>
+          </article>
+          <article class="card">
+            <h4>Software Development</h4>
+            <p>Brief text about your interest.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- RESUME -->
+      <section id="resume" class="section">
+        <h2>Resume</h2>
+
+        <p>
+          <a href="CV.pdf" target="_blank" class="btn">
+            Download PDF
+          </a>
+        </p>
+
+        <h3>Publications</h3>
+        <ol class="list">
+          <li>
+            <strong>Paper Title 1</strong><br />
+            Author1, Author2, <strong>Your Name</strong>, Author4.<br />
+            <em>Journal / Conference</em>, 2025.
+            <a href="https://doi.org/xx.xxxx/xxxxxx" target="_blank">[Link]</a>
+          </li>
+          <li>
+            <strong>Paper Title 2</strong><br />
+            ...
+          </li>
+        </ol>
+
+        <h3>Conferences & Participations</h3>
+        <ol class="list">
+          <li>
+            <strong>Conference Name</strong> – Month 2025 – (City, Country)<br />
+            Title of the contribution (Poster / Talk).<br />
+            <a href="#">Abstract / Link (optional)</a>
+          </li>
+        </ol>
+
+        <h3>Experience</h3>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h4>Lab / Company – City, Country</h4>
+            <p class="timeline-period">Research Position – 2023 – present</p>
+            <ul>
+              <li>Bullet describing activity.</li>
+              <li>Another bullet describing activity.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3>Education</h3>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h4>PhD, Your Program</h4>
+            <p class="timeline-period">Your School, 2024 – present</p>
+            <p>Thesis: Lorem ipsum...</p>
+          </article>
+          <article class="timeline-item">
+            <h4>MSc, Something</h4>
+            <p class="timeline-period">Your University, 2021 – 2024</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SCIENCE -->
+      <section id="science" class="section">
+        <h2>Science</h2>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="publication">Publication</button>
+          <button class="filter-btn" data-filter="poster">Poster</button>
+          <button class="filter-btn" data-filter="report">Report</button>
+        </div>
+
+        <div class="cards" id="science-list">
+          <article class="card science-item" data-category="publication">
+            <h4>Publication Example</h4>
+            <p>
+              Short description of the paper.  
+              <a href="#" target="_blank">[Link]</a>
+            </p>
+          </article>
+
+          <article class="card science-item" data-category="poster">
+            <h4>Conference Poster Example</h4>
+            <p>
+              Short description of the poster.  
+              <a href="#" target="_blank">[Poster PDF]</a>
+            </p>
+          </article>
+
+          <article class="card science-item" data-category="report">
+            <h4>Project Report Example</h4>
+            <p>
+              Short description of the project report.  
+              <a href="#" target="_blank">[GitHub]</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+
+        <ul class="project-list">
+          <li>
+            <a href="https://github.com/your-username/project1" target="_blank">
+              <strong>Project 1</strong>
+            </a>
+            – Short description of the project.
+          </li>
+          <li>
+            <a href="https://github.com/your-username/project2" target="_blank">
+              <strong>Project 2</strong>
+            </a>
+            – Short description of the project.
+          </li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>
+          You can reach me at <a href="mailto:you@example.com">you@example.com</a>.
+        </p>
+
+        <!-- Optional static form (need external service if you want it to actually send emails) -->
+        <form class="contact-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Your email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Your message"></textarea>
+          </div>
+
+          <button type="submit" class="btn" disabled>
+            Send (demo only)
+          </button>
+          <p class="form-note">
+            This form is static. To make it work, connect it to a service like
+            Formspree, Netlify Forms, etc.
+          </p>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
