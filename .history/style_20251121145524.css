@@ -217,13 +217,6 @@ body {
   color: var(--text);
 }
 
-.sidebar-nav a.active {
-  background: rgba(94, 234, 212, 0.15);
-  color: var(--accent);
-  border-left: 3px solid var(--accent);
-  padding-left: 0.25rem;
-}
-
 /* Sections */
 .section {
   padding-bottom: 2.5rem;
@@ -514,47 +507,6 @@ a {
   color: var(--accent);
 }
 
-/* Back to top button */
-.back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, var(--accent), #6366f1);
-  color: #020617;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px) scale(0.8);
-  transition: all 0.3s ease;
-  box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(94, 234, 212, 0.5);
-  z-index: 1000;
-}
-
-.back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-}
-
-.back-to-top:hover {
-  transform: translateY(-3px) scale(1.1);
-  box-shadow: 
-    0 8px 30px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(94, 234, 212, 0.8);
-}
-
-.back-to-top:active {
-  transform: translateY(-1px) scale(1.05);
-}
-
 /* Responsive */
 @media (max-width: 900px) {
   .page {
@@ -732,7 +684,7 @@ a {
   line-height: 1.5;
 }
 
-/* Mobile responsiveness for education and other elements */
+/* Stack meta under title on small screens */
 @media (max-width: 700px) {
   .edu-header {
     flex-direction: column;
@@ -741,31 +693,6 @@ a {
   .edu-meta {
     text-align: left;
     margin-top: 0.3rem;
-  }
-  
-  .edu-item {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .edu-icon {
-    align-self: center;
-    margin-bottom: 1rem;
-  }
-  
-  .timeline-item::before {
-    left: -2rem;
-  }
-  
-  .timeline {
-    padding-left: 1.5rem;
-  }
-  
-  .back-to-top {
-    bottom: 1rem;
-    right: 1rem;
-    width: 45px;
-    height: 45px;
   }
 }
 }

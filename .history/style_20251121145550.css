@@ -217,13 +217,6 @@ body {
   color: var(--text);
 }
 
-.sidebar-nav a.active {
-  background: rgba(94, 234, 212, 0.15);
-  color: var(--accent);
-  border-left: 3px solid var(--accent);
-  padding-left: 0.25rem;
-}
-
 /* Sections */
 .section {
   padding-bottom: 2.5rem;
