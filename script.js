@@ -1,4 +1,4 @@
-// Toggle contacts visibility
+// === CONTACTS TOGGLE ===
 const toggleBtn = document.getElementById("toggle-contacts");
 const contactsList = document.getElementById("contacts");
 
@@ -9,7 +9,7 @@ if (toggleBtn && contactsList) {
   });
 }
 
-// Science filter
+// === SCIENCE FILTER ===
 const filterButtons = document.querySelectorAll(".filter-btn");
 const scienceItems = document.querySelectorAll(".science-item");
 
@@ -30,3 +30,75 @@ filterButtons.forEach((btn) => {
     });
   });
 });
+
+// === SCROLL PROGRESS BAR ===
+const scrollProgressEl = document.getElementById("scrollProgress");
+
+function updateScrollProgress() {
+  if (!scrollProgressEl) return;
+  const scrollTop = window.scrollY || window.pageYOffset;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  scrollProgressEl.style.width = progress + "%";
+}
+
+window.addEventListener("scroll", updateScrollProgress);
+window.addEventListener("resize", updateScrollProgress);
+updateScrollProgress();
+
+// === ACTIVE NAV LINK ON SCROLL ===
+const sections = document.querySelectorAll("main .section");
+const navLinks = document.querySelectorAll(".sidebar-nav a");
+
+function updateActiveNav() {
+  let currentId = null;
+
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    // pick section that crosses this vertical line
+    if (rect.top <= 140 && rect.bottom >= 140) {
+      currentId = section.id;
+    }
+  });
+
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    const id = href.startsWith("#") ? href.substring(1) : "";
+    if (id && id === currentId) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", updateActiveNav);
+window.addEventListener("resize", updateActiveNav);
+updateActiveNav();
+
+// === BACK TO TOP BUTTON ===
+const backToTopBtn = document.getElementById("backToTop");
+
+function updateBackToTopVisibility() {
+  if (!backToTopBtn) return;
+  if (window.scrollY > 400) {
+    backToTopBtn.classList.add("visible");
+  } else {
+    backToTopBtn.classList.remove("visible");
+  }
+}
+
+if (backToTopBtn) {
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+window.addEventListener("scroll", () => {
+  updateBackToTopVisibility();
+  updateActiveNav();
+  updateScrollProgress();
+});
+
+// Initial state
+updateBackToTopVisibility();
