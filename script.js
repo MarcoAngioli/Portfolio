@@ -54,33 +54,6 @@
     });
   }
 
-  // --- Stat counter animation ---
-  function animateCounters() {
-    const counters = document.querySelectorAll('.stat-number[data-target]');
-    counters.forEach(counter => {
-      if (counter.dataset.animated) return;
-
-      const rect = counter.getBoundingClientRect();
-      if (rect.top > window.innerHeight || rect.bottom < 0) return;
-
-      counter.dataset.animated = 'true';
-      const target = parseInt(counter.dataset.target);
-      const duration = 1500;
-      const start = performance.now();
-
-      function update(now) {
-        const elapsed = now - start;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        counter.textContent = Math.round(eased * target);
-        if (progress < 1) {
-          requestAnimationFrame(update);
-        }
-      }
-      requestAnimationFrame(update);
-    });
-  }
-
   // --- Fade-in on scroll ---
   function setupFadeAnimations() {
     const fadeElements = document.querySelectorAll(
@@ -134,7 +107,6 @@
   function onScroll() {
     updateNavbar();
     updateActiveLink();
-    animateCounters();
     checkFadeElements();
   }
 
