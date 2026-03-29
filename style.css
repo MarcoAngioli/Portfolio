@@ -647,6 +647,12 @@ a:hover { color: var(--cyan); }
   border-radius: var(--radius);
 }
 
+.result-value sup {
+  font-size: 0.65em;
+  vertical-align: super;
+  line-height: 0;
+}
+
 .result-value {
   display: block;
   font-family: var(--font-mono);
@@ -890,6 +896,90 @@ a:hover { color: var(--cyan); }
 .pipeline-arrow {
   color: var(--text-dim);
   font-size: 0.8rem;
+}
+
+/* OSS Grid */
+.oss-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.oss-card {
+  padding: 1.75rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.oss-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.oss-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.oss-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(108, 99, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-light);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.oss-header h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.1rem;
+}
+
+.oss-org {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.oss-card p {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.oss-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.oss-tech span {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.15);
+  color: var(--cyan);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .oss-grid { grid-template-columns: 1fr; }
 }
 
 /* Skills */
